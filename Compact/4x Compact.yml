@@ -18,7 +18,7 @@ datasets:
     type: PairedImageDataset
     dataroot_gt: 
     dataroot_lq: 
-    #meta_info: datasets/Deint/meta_info/meta_info_deint_pair.txt 
+    #meta_info: datasets/Deint/meta_info/meta_info_deint_pair.txt
     io_backend:
       type: disk
 
@@ -86,7 +86,7 @@ train:
     type: L1Loss
     loss_weight: 0.65
     reduction: mean
-    
+
   # perceptual loss (content and style losses)
   perceptual_opt:
     type: PerceptualLoss
@@ -103,7 +103,7 @@ train:
     style_weight: 0
     range_norm: false
     criterion: l1
-    
+
   # contextual loss
   contextual_opt:
     type: ContextualLoss
@@ -114,23 +114,23 @@ train:
     distance_type: "cosine"
     calc_type: "regular"
     z_norm: false
-    crop_quarter: false,
+    crop_quarter: false
     b: 1.0
     band_width: 0.5
-    use_vgg: true,
+    use_vgg: true
     net: vgg19
-    
+
   color_opt:
     type: ColorLoss
     criterion: "l1"
     loss_weight: 1
-    
+
   #avg_opt:
     #type: AverageLoss
     #criterion: "l1"
     #loss_weight: 1.0
     #scale: 4
-    
+
   # gan loss
   gan_opt:
     type: GANLoss
@@ -141,7 +141,7 @@ train:
 
   net_d_iters: 1
   net_d_init_iters: 0
-  
+
 # logging settings
 logger:
   print_freq: 100 # print an update after this many iterations

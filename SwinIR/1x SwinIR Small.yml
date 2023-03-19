@@ -80,7 +80,7 @@ train:
     type: L1Loss
     loss_weight: 0.8
     reduction: mean
-    
+
   # perceptual loss (content and style losses)
   perceptual_opt:
     type: PerceptualLoss
@@ -97,7 +97,7 @@ train:
     style_weight: 0
     range_norm: false
     criterion: l1
-    
+
   # contextual loss
   contextual_opt:
     type: ContextualLoss
@@ -108,17 +108,17 @@ train:
     distance_type: "cosine"
     calc_type: "regular"
     z_norm: false
-    crop_quarter: false,
+    crop_quarter: false
     b: 1.0
     band_width: 0.5
-    use_vgg: true,
+    use_vgg: true
     net: vgg19
-    
+
   color_opt:
     type: ColorLoss
     criterion: "l1"
     loss_weight: 1
-    
+
   # gan loss
   gan_opt:
     type: GANLoss
@@ -126,7 +126,6 @@ train:
     real_label_val: 1.0
     fake_label_val: 0.0
     loss_weight: !!float 1e-1
-
 
 # logging settings
 logger:
