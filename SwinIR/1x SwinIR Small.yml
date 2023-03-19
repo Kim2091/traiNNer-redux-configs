@@ -1,6 +1,6 @@
 # general settings
 name: SwinIRSmall
-model_type: SRGANModel
+model_type: SwinIRModel
 scale: 1
 num_gpu: auto
 manual_seed: 0
