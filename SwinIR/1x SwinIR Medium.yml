@@ -12,7 +12,7 @@ datasets:
     type: PairedImageDataset
     dataroot_gt: 
     dataroot_lq: 
-    #meta_info_file: basicsr/data/meta_info/meta_info_DIV2K800sub_GT.txt
+    #meta_info: basicsr/data/meta_info/meta_info_DIV2K800sub_GT.txt
     filename_tmpl: '{}'
     io_backend:
       type: disk
