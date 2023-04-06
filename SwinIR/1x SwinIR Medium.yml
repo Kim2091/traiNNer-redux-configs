@@ -41,6 +41,12 @@ network_g:
   mlp_ratio: 2
   upsampler: 'pixelshuffle'
   resi_connection: '1conv'
+  
+network_d:
+  type: UNetDiscriminatorSN
+  num_in_ch: 3
+  num_feat: 64
+  skip_connection: True
 
 # path
 path:
