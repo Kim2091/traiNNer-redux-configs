@@ -1,6 +1,6 @@
 # general settings
 name: SwinIRSmall
-model_type: SwinIRModel
+model_type: SwinIRModel # Change to SwinIRGANModel if you do not want GAN loss
 scale: 1
 num_gpu: auto
 manual_seed: 0
