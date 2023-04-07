@@ -1,6 +1,6 @@
 # general settings
 name: SwinIRSmall
-model_type: SwinIRGANModel # Change to SwinIRModel if you do not want GAN loss
+model_type: SwinIRGANModel # Valid options: SwinIRGANModel, SwinIRModel (no GAN Loss), and RealSwinIRGANModel (enables Real-ESRGAN OTF)
 scale: 1
 num_gpu: auto
 manual_seed: 0
