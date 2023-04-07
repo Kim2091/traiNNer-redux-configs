@@ -1,5 +1,5 @@
 # general settings
-name: Compact
+name: Real-ESRGAN
 model_type: RealESRGANModel
 scale: 2 #the scale size of the model
 num_gpu: auto
@@ -21,7 +21,7 @@ datasets:
     io_backend:
       type: disk
 
-    gt_size: 256 #during training, it will crop a square of this size from your images, larger is usually better but uses more vram
+    gt_size: 128 #during training, it will crop a square of this size from your images, larger is usually better but uses more vram
     use_hflip: true #randomly flip the images horizontally
     use_rot: true #randomly rotate the images
 
@@ -34,13 +34,13 @@ datasets:
 
 # network structures
 network_g:
-  type: SRVGGNetCompact
+  type: RRDBNet
+  scale: 2
   num_in_ch: 3
   num_out_ch: 3
   num_feat: 64
-  num_conv: 16
-  upscale: 2
-  act_type: prelu
+  num_block: 23
+  num_grow_ch: 32
 
 network_d:
   type: UNetDiscriminatorSN

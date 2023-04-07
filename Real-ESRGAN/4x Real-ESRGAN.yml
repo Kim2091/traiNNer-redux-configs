@@ -1,7 +1,7 @@
 # general settings
-name: Compact
+name: Real-ESRGAN
 model_type: RealESRGANModel
-scale: 2 #the scale size of the model
+scale: 4 #the scale size of the model
 num_gpu: auto
 manual_seed: 0
 
@@ -34,13 +34,13 @@ datasets:
 
 # network structures
 network_g:
-  type: SRVGGNetCompact
+  type: RRDBNet
+  scale: 4
   num_in_ch: 3
   num_out_ch: 3
   num_feat: 64
-  num_conv: 16
-  upscale: 2
-  act_type: prelu
+  num_block: 23
+  num_grow_ch: 32
 
 network_d:
   type: UNetDiscriminatorSN
@@ -83,7 +83,7 @@ train:
   # losses
   pixel_opt:
     type: L1Loss
-    loss_weight: 0.8
+    loss_weight: 0.65
     reduction: mean
 
   # perceptual loss (content and style losses)
@@ -123,6 +123,12 @@ train:
     type: ColorLoss
     criterion: "l1"
     loss_weight: 1
+
+  #avg_opt:
+    #type: AverageLoss
+    #criterion: "l1"
+    #loss_weight: 1.0
+    #scale: 4
 
   # gan loss
   gan_opt:
