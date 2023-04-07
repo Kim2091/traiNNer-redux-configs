@@ -36,10 +36,9 @@ queue_size: 180
 datasets:
   train:
     name: test
-    type: PairedImageDataset
+    type: RealESRGANDataset
     dataroot_gt: 
-    dataroot_lq: 
-    #meta_info: datasets/Deint/meta_info/meta_info_deint_pair.txt
+    meta_info: 
     io_backend:
       type: disk
       
