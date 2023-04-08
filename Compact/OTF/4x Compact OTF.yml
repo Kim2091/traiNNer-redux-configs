@@ -80,6 +80,7 @@ network_g:
   num_conv: 16
   upscale: 4
   act_type: prelu
+  conv2x2: False
 
 network_d:
   type: UNetDiscriminatorSN
