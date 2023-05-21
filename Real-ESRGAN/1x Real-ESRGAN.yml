@@ -4,6 +4,7 @@ model_type: RealESRGANModel
 scale: 1 #the scale size of the model
 num_gpu: auto
 manual_seed: 0
+high_order_degradation: False
 
 # USM the ground-truth #if these are true, it will apply an unsharp mask to the HR images, causing halos on the output
 l1_gt_usm: False
